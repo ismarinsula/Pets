@@ -1,0 +1,13 @@
+﻿@model List<PetsSorted.Models.Pet>
+
+<table class="table">
+    
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+    </tr>
+}
+
+</table>

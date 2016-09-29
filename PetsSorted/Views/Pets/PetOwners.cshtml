@@ -1,0 +1,21 @@
+﻿@model List<PetsSorted.Models.PetOwnerGender>
+
+@{
+    ViewBag.Title = "PetsOwner";
+}
+
+<h2>Pets by Gender</h2>
+
+
+<table class="table">
+    
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+            @Html.Partial("Pets", item.Pets)
+        </td>
+    </tr>
+}
+
+</table>
